@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body onload="wakeUpHeroku()">
 
     <div class="KW_progressContainer">
       <div class="KW_progressBar">
@@ -236,6 +236,14 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script>
+				function wakeUpHeroku() {
+					fetch('https://sharecipe-recipeshare.herokuapp.com', {mode: 'no-cors'});
+					fetch('https://issues-that-matter.herokuapp.com', {mode: 'no-cors'});
+					fetch('https://shoecollector.herokuapp.com', {mode: 'no-cors'});
+					fetch('https://trackpaks.herokuapp.com', {mode: 'no-cors'});
+				}
+		</script>
     
   </body>
 </html>
